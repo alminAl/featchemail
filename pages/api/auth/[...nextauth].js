@@ -6,16 +6,14 @@ export const authOptions = {
   site: process.env.NEXTAUTH_URL,
   providers: [
     GoogleProvider({
-      clientId:
-        "987056369659-4c741pngqcn3qkd6j8qgdp7ssd8am47s.apps.googleusercontent.com",
-      clientSecret: "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",
+      clientId: process.env.GOOGLE_CLIENT_ID,
+      clientSecret: process.env.GOOGLE_SECRITE_ID,
       authorization: {
         params: {
           scope:
             "https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile https://mail.google.com",
         },
       },
-
     }),
     // ...add more providers here
   ],
